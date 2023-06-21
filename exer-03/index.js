@@ -22,7 +22,7 @@ else{
     }
     
 }
-div.innerHTML= `a soma entre os numero ${num1} e ${num2} é: ${soma}`
+div.innerHTML= soma
 }
 
 btn.addEventListener('click', somaImpares);
