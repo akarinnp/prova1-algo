@@ -1,17 +1,21 @@
+let number1 = document.getElementById('numero1');
+let number2 = document.getElementById('numero2');
+let btn = document.getElementById('btn');
+let div = document.getElementById('result');
 
-let div = document.getElementById('resultado')
-let soma = 0
-
-let num1 = prompt('digite um número:')
-let num2 = prompt('digite um número:')
-
+function somaImpares(){
+    let num1 = parseInt(number1.value);
+    let num2 = parseInt(number2.value);
+    let i = 0;
+    let soma = 0;
+    
 if(num1 < 0 && num2 < 0){
     alert('ERRO-digite um numero maior que 0')
     
 
 }
 else{
-   for(let i = num1 ;i < num2; i++ ){
+   for(i = num1 ;i < num2; i++ ){
     if(i % 2 != 0){
         soma+=i
 
@@ -20,3 +24,6 @@ else{
 }
 div.innerHTML= `a soma entre os numero ${num1} e ${num2} é: ${soma}`
 }
+
+btn.addEventListener('click', somaImpares);
+
